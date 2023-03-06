@@ -1,0 +1,11 @@
+<%- include("partials/header") %>
+<link rel="stylesheet" href="public/css/styles.css">
+<h1>Home</h1>
+<p class="homeP"> <%=homeContent%> </p>
+<% for(let i=0; i<postsArray.length; i++) { %>
+    <h1> <%= postsArray[i].title %> </h1>
+    <p class="homeP"> <%= postsArray[i].content %> </p>
+    <% console.log("/post/"+postsArray[i].title) %>
+    <a href= "/post/<%= postsArray[i].title %>">Read More</a>
+<% } %>
+<%- include("partials/footer") %>
